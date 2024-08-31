@@ -98,3 +98,6 @@ struct LoginView_Previews: PreviewProvider {
 #Preview {
     LoginView()
 }
+
+
+// Note for Jonothan: use this code as starting point for next screens

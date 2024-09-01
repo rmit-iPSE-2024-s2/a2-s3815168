@@ -12,6 +12,7 @@
 		75CE269C2C8365E40040492F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75CE269B2C8365E40040492F /* Assets.xcassets */; };
 		75CE269F2C8365E40040492F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75CE269E2C8365E40040492F /* Preview Assets.xcassets */; };
 		75CE26A62C8458440040492F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE26A52C8458440040492F /* RegisterView.swift */; };
+		75CE26A82C845A8B0040492F /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE26A72C845A8B0040492F /* MainMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		75CE269B2C8365E40040492F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75CE269E2C8365E40040492F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		75CE26A52C8458440040492F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		75CE26A72C845A8B0040492F /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				75CE26972C8365E00040492F /* WalkMyDogAppApp.swift */,
 				75CE26992C8365E00040492F /* LoginView.swift */,
 				75CE26A52C8458440040492F /* RegisterView.swift */,
+				75CE26A72C845A8B0040492F /* MainMenuView.swift */,
 				75CE269B2C8365E40040492F /* Assets.xcassets */,
 				75CE269D2C8365E40040492F /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				75CE26A62C8458440040492F /* RegisterView.swift in Sources */,
 				75CE269A2C8365E00040492F /* LoginView.swift in Sources */,
+				75CE26A82C845A8B0040492F /* MainMenuView.swift in Sources */,
 				75CE26982C8365E00040492F /* WalkMyDogAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

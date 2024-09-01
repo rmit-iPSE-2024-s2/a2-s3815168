@@ -111,5 +111,3 @@ struct RegisterView_Previews: PreviewProvider {
     RegisterView()
 }
 
-
-// Note for Jonothan: use this code as starting point for next screens

@@ -15,13 +15,16 @@
 import SwiftUI
 
 struct MainMenuView: View {
-    // Variables for username and password and email
-    @State private var username: String = ""
-    @State private var email: String = ""
-    @State private var password: String = ""
-    
+   
     var body: some View {
         VStack {
+            
+            Text("Welcome, John Doe!")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+                .padding(.top, 50)
+            
             // Logo now became tappable, you can press it for extra menu options
             Menu {
                             Button(action: {
@@ -96,7 +99,7 @@ struct MainMenuView: View {
             }
          
             
-            Spacer().frame(height: 200)
+            Spacer().frame(height: 80)
             
    
             // Back button

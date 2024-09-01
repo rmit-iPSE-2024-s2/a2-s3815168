@@ -5,13 +5,6 @@
 //  Created by Artur on 1/9/2024.
 //
 
-//
-//  RegisterView.swift
-//  WalkMyDogApp
-//
-//  Created by Artur on 1/9/2024.
-//
-
 import SwiftUI
 
 struct MainMenuView: View {

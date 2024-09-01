@@ -1,66 +1,47 @@
+
 //
-//  WalkerView.swift
+//  MainMenuView.swift
 //  WalkMyDogApp
 //
 //  Created by Artur on 1/9/2024.
 //
-
+import GoogleMaps
 import SwiftUI
 
-struct Walker: Identifiable {
-    let id = UUID()
-    let name: String
-}
-
-
-struct WalkerView: View {
-    // Hardcoded data
-    let walkers = [
-        Walker(name: "Adam"),
-        Walker(name: "Bob"),
-        Walker(name: "Craig")
-    ]
-    
+struct JobView: View {
+   
     var body: some View {
-        
         VStack {
+            
             // Text box at the top
-            Text("Search Walkers")
+            Text("Look for Jobs Available")
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(Color.white)
                              
             Spacer().frame(height: 20)
             // Search bar placeholder (for future enhancement)
-            TextField("Search name", text: .constant(""))
+            TextField("Search area", text: .constant(""))
                 .padding()
                 .background(Color.white)
                 .cornerRadius(10)
                 .padding(.horizontal, 20)
                 
+            Spacer().frame(height: 45)
             
-            // List of Walkers
-            List(walkers) { walker in
-                HStack {
-                    Image(systemName: "person.circle.fill")
-                        .resizable()
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(.black)
-                    
-                    Text(walker.name)
-                        .font(.title2)
-                        .foregroundColor(.black)
-                        .padding(.leading, 10)
-                }
-                .padding(.vertical, 5)
-            }
-            .listStyle(PlainListStyle()) // Ensures a clean look without separators
+            // Google Map view
+            GoogleMapView()
+                .frame(height: 300)
+                .cornerRadius(10)
+                .padding(.horizontal, 20)
             
-            Spacer()
             
-            // Back Button
+            Spacer().frame(height: 80)
+            
+   
+            // Back button
             Button(action: {
-                // Action to go back or close the screen
+                // Back button action will be added here
             }) {
                 Text("Back")
                     .font(.headline)
@@ -73,10 +54,8 @@ struct WalkerView: View {
                     .padding(.top, 10)
             }
             
-            Spacer().frame(height: 20)
-            
+            Spacer(minLength: 45)
         }
-        
         .background(
             LinearGradient(gradient: Gradient(colors: [Color.blue, Color.green]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
@@ -84,14 +63,14 @@ struct WalkerView: View {
     }
 }
 
-struct WalkerListView_Previews: PreviewProvider {
+struct JobView_Previews: PreviewProvider {
     static var previews: some View {
-        WalkerView()
+        JobView()
     }
 }
 
-
-
 #Preview {
-    WalkerView()
+    JobView()
 }
+
+

@@ -27,25 +27,26 @@ struct MainMenuView: View {
             
             // Logo now became tappable, you can press it for extra menu options
             Menu {
-                            Button(action: {
-                                // Action 1 code
-                                print("Settings selected")
-                            }) {
-                                Text("Settings")
+                Button(action: {
+                    // Action 1 code
+                print("Settings selected")
+                            }
+                ) {
+                    Text("Settings")
                             }
                             
-                            Button(action: {
-                                // Action 2 code
-                                print("Help selected")
+                    Button(action: {
+                    // Action 2 code
+                    print("Help selected")
                             }) {
-                                Text("Help")
+                    Text("Help")
                             }
                         } label: {
-                            Image("logo")
-                                .resizable()
-                                .frame(width: 100, height: 100)
-                                .clipShape(Circle()) // Makes the logo round
-                                .shadow(color: .gray, radius: 10, x: 0, y: 10) // Adds shadow
+                    Image("logo")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle()) // Makes the logo round
+                        .shadow(color: .gray, radius: 10, x: 0, y: 10) // Adds shadow
                         }
                         .padding(.vertical, 70.0)
             

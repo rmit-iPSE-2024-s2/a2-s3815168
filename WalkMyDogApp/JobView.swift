@@ -13,6 +13,8 @@ struct JobView: View {
     var body: some View {
         VStack {
             
+            Spacer().frame(height: 40)
+            
             // Text box at the top
             Text("Look for Jobs Available")
                 .font(.title)
@@ -36,7 +38,7 @@ struct JobView: View {
                 .padding(.horizontal, 20)
             
             
-            Spacer().frame(height: 80)
+            Spacer().frame(height: 90)
             
    
             // Back button
@@ -54,7 +56,7 @@ struct JobView: View {
                     .padding(.top, 10)
             }
             
-            Spacer(minLength: 45)
+            Spacer(minLength: 90)
         }
         .background(
             LinearGradient(gradient: Gradient(colors: [Color.blue, Color.green]), startPoint: .top, endPoint: .bottom)

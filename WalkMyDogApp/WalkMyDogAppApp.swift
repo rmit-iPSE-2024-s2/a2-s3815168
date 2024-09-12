@@ -12,7 +12,7 @@ import GoogleMaps
 struct WalkMyDogAppApp: App {
     
     init() {
-        GMSServices.provideAPIKey("AIzaSyBI_k6IOKMRg3wPeH-_3n2hozNGuQM2KI4")
+        GMSServices.provideAPIKey("Insert API Key")
     }
     
     var body: some Scene {

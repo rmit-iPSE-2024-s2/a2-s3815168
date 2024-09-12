@@ -4,7 +4,7 @@ import GoogleMaps
 struct GoogleMapView: UIViewRepresentable {
     func makeUIView(context: Context) -> GMSMapView {
         let camera = GMSCameraPosition.camera(withLatitude: -37.7136, longitude: 144.8631, zoom: 10)
-        let mapView = GMSMapView(frame: .zero)
+        let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         mapView.camera = camera
         return mapView
     }

@@ -38,19 +38,20 @@ struct WalkerView: View {
                 .cornerRadius(10)
                 .padding(.horizontal, 20)
                 
+            Spacer().frame(height: 50)
             
-            // List of Walkers
+            // List of Walkers displayed
             List(walkers) { walker in
                 HStack {
                     Image(systemName: "person.circle.fill")
                         .resizable()
-                        .frame(width: 100, height: 100)
+                        .frame(width: 45, height: 45)
                         .foregroundColor(.black)
                     
                     Text(walker.name)
                         .font(.title2)
                         .foregroundColor(.black)
-                        .padding(.leading, 10)
+                        .padding(.leading, 5)
                 }
                 .padding(.vertical, 5)
             }
@@ -58,7 +59,7 @@ struct WalkerView: View {
             
             Spacer()
             
-            // Back Button
+            // The back button is displayed at the bottom
             Button(action: {
                 // Action to go back or close the screen
             }) {

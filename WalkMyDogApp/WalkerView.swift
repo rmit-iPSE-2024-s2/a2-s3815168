@@ -18,7 +18,8 @@ struct WalkerView: View {
     let walkers = [
         Walker(name: "Adam"),
         Walker(name: "Bob"),
-        Walker(name: "Craig")
+        Walker(name: "Craig"),
+        Walker(name: "Artur")
     ]
     
     var body: some View {

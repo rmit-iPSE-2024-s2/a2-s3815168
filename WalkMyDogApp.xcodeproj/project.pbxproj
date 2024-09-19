@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7550A29C2C9BCDB100275CF7 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550A29B2C9BCDB100275CF7 /* UserDataModel.swift */; };
 		75CE26982C8365E00040492F /* WalkMyDogAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE26972C8365E00040492F /* WalkMyDogAppApp.swift */; };
 		75CE269A2C8365E00040492F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE26992C8365E00040492F /* LoginView.swift */; };
 		75CE269C2C8365E40040492F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75CE269B2C8365E40040492F /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7550A29B2C9BCDB100275CF7 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		75CE26942C8365E00040492F /* WalkMyDogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkMyDogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CE26972C8365E00040492F /* WalkMyDogAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkMyDogAppApp.swift; sourceTree = "<group>"; };
 		75CE26992C8365E00040492F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -46,6 +48,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7550A29A2C9BCD8600275CF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7550A29B2C9BCDB100275CF7 /* UserDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7550A29D2C9BCDE600275CF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				75CE26992C8365E00040492F /* LoginView.swift */,
+				75CE26A52C8458440040492F /* RegisterView.swift */,
+				75CE26A72C845A8B0040492F /* MainMenuView.swift */,
+				75CE26A92C8465B70040492F /* WalkerView.swift */,
+				75CE26B22C849ABC0040492F /* JobView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		75CE268B2C8365E00040492F = {
 			isa = PBXGroup;
 			children = (
@@ -65,12 +87,9 @@
 		75CE26962C8365E00040492F /* WalkMyDogApp */ = {
 			isa = PBXGroup;
 			children = (
+				7550A29A2C9BCD8600275CF7 /* Model */,
 				75CE26972C8365E00040492F /* WalkMyDogAppApp.swift */,
-				75CE26992C8365E00040492F /* LoginView.swift */,
-				75CE26A52C8458440040492F /* RegisterView.swift */,
-				75CE26A72C845A8B0040492F /* MainMenuView.swift */,
-				75CE26A92C8465B70040492F /* WalkerView.swift */,
-				75CE26B22C849ABC0040492F /* JobView.swift */,
+				7550A29D2C9BCDE600275CF7 /* View */,
 				75CE26B42C849E520040492F /* GoogleMapView.swift */,
 				75CE26B62C849EE00040492F /* AppDelegate.swift */,
 				75CE269B2C8365E40040492F /* Assets.xcassets */,
@@ -169,6 +188,7 @@
 				75CE26AA2C8465B70040492F /* WalkerView.swift in Sources */,
 				75CE269A2C8365E00040492F /* LoginView.swift in Sources */,
 				75CE26B52C849E520040492F /* GoogleMapView.swift in Sources */,
+				7550A29C2C9BCDB100275CF7 /* UserDataModel.swift in Sources */,
 				75CE26A82C845A8B0040492F /* MainMenuView.swift in Sources */,
 				75CE26982C8365E00040492F /* WalkMyDogAppApp.swift in Sources */,
 			);

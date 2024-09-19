@@ -9,9 +9,13 @@ import SwiftUI
 
 struct RegisterView: View {
     // Variables for username and password and email
+    @ObservedObject var userDataModel: UserDataModel
     @State private var username: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
+    
+    // Environment variable to dismiss the view
+     @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack {
@@ -65,7 +69,7 @@ struct RegisterView: View {
             
             // Register button
             Button(action: {
-                // Register button action will be added here
+                userDataModel.saveUser(username: username, password: password)
             }) {
                 Text("Register")
                     .font(.headline)
@@ -79,7 +83,7 @@ struct RegisterView: View {
             
             // Back button
             Button(action: {
-                // Back button action will be added here
+                dismiss()  // This dismisses the RegisterView and goes back to the LoginView
             }) {
                 Text("Back")
                     .font(.headline)
@@ -101,13 +105,13 @@ struct RegisterView: View {
     }
 }
 
-struct RegisterView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegisterView()
-    }
-}
-
-#Preview {
-    RegisterView()
-}
+//struct RegisterView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RegisterView(userDataModel: <#UserDataModel#>)
+//    }
+//}
+//
+//#Preview {
+//    RegisterView(userDataModel: <#UserDataModel#>)
+//}
 

@@ -16,6 +16,9 @@ struct LoginView: View {
     
     @ObservedObject var userDataModel: UserDataModel
     
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -56,12 +59,13 @@ struct LoginView: View {
                 
                 Spacer().frame(height: 40)
                 
-                // Login button
+                // Login button with error handling
                 Button(action: {
                     if userDataModel.authenticateUser(username: username, password: password) {
                         isLoggedIn = true
                     } else {
-                        // Show error, user not found or password incorrect
+                        alertMessage = "Incorrect username or password"
+                        showAlert = true
                     }
                 }) {
                     Text("Login")
@@ -73,7 +77,9 @@ struct LoginView: View {
                         .cornerRadius(90)
                         .padding(.horizontal, 40)
                 }
-                
+                .alert(isPresented: $showAlert) {
+                    Alert(title: Text("Login Failed"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                }
                 .navigationDestination(isPresented: $isLoggedIn) {
                     MainMenuView() // Navigate to MainMenuView when login is successful
                 }

@@ -17,6 +17,11 @@ struct RegisterView: View {
     // Environment variable to dismiss the view
      @Environment(\.dismiss) var dismiss
     
+    
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+
+    
     var body: some View {
         VStack {
             // Logo at the top
@@ -67,9 +72,21 @@ struct RegisterView: View {
             
             Spacer().frame(height: 40)
             
-            // Register button
+            // Register button with validation logic
             Button(action: {
-                userDataModel.saveUser(username: username, password: password)
+                guard !username.isEmpty, !email.isEmpty, !password.isEmpty else {
+                    alertMessage = "All fields are required!"
+                    showAlert = true
+                    return
+                }
+                
+                if !userDataModel.users.contains(where: { $0.username == username }) {
+                    userDataModel.saveUser(username: username, password: password)
+                    dismiss()  // Dismiss the registration view after successful registration
+                } else {
+                    alertMessage = "Username already exists!"
+                    showAlert = true
+                }
             }) {
                 Text("Register")
                     .font(.headline)
@@ -105,11 +122,7 @@ struct RegisterView: View {
     }
 }
 
-//struct RegisterView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RegisterView(userDataModel: <#UserDataModel#>)
-//    }
-//}
+
 //
 //#Preview {
 //    RegisterView(userDataModel: <#UserDataModel#>)

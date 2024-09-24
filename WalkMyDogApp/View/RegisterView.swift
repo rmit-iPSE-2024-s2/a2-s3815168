@@ -123,8 +123,8 @@ struct RegisterView: View {
 }
 
 
-//
-//#Preview {
-//    RegisterView(userDataModel: <#UserDataModel#>)
-//}
+
+#Preview {
+    RegisterView(userDataModel: UserDataModel())
+}
 

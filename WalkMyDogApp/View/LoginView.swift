@@ -112,9 +112,9 @@ struct LoginView: View {
         }
     }
     
-    
-    
-//    #Preview {
-//        LoginView(userDataModel: UserDataModel())
-//    }
 }
+
+#Preview {
+    LoginView(userDataModel: UserDataModel())
+}
+

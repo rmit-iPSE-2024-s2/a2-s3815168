@@ -96,11 +96,11 @@ struct MainMenuView: View {
             Spacer().frame(height: 80)
             
    
-            // Back button
+            // Logout button
             Button(action: {
-                // Back button action will be added here
+                // Logout action will be added here
             }) {
-                Text("Back")
+                Text("Log Out")
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()

@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct MainMenuView: View {
-   
+    // Environment to dismiss the current view
+     @Environment(\.dismiss) var dismiss
+    
+    var username: String
+    
     var body: some View {
         VStack {
             
-            Text("Welcome, John Doe!")
+            Text("Welcome, \(username)!")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
@@ -41,7 +45,7 @@ struct MainMenuView: View {
                         .clipShape(Circle()) // Makes the logo round
                         .shadow(color: .gray, radius: 10, x: 0, y: 10) // Adds shadow
                         }
-                        .padding(.vertical, 70.0)
+                        .padding(.vertical, 50.0)
             
             
 
@@ -98,7 +102,8 @@ struct MainMenuView: View {
    
             // Logout button
             Button(action: {
-                // Logout action will be added here
+                // Log out action using dismiss
+                         dismiss()  // This dismisses the MainMenuView and takes the user back to LoginView
             }) {
                 Text("Log Out")
                     .font(.headline)
@@ -122,12 +127,12 @@ struct MainMenuView: View {
 
 struct MainMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        MainMenuView()
+        MainMenuView(username: "@username")
     }
 }
 
 #Preview {
-    MainMenuView()
+    MainMenuView(username: "@username!")
 }
 
 

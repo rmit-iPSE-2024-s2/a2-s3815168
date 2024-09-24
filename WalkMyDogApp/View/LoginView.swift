@@ -81,7 +81,7 @@ struct LoginView: View {
                     Alert(title: Text("Login Failed"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                 }
                 .navigationDestination(isPresented: $isLoggedIn) {
-                    MainMenuView() // Navigate to MainMenuView when login is successful
+                    MainMenuView(username: username) // Navigate to MainMenuView when login is successful
                 }
                 
                 // Register button

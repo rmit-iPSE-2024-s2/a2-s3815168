@@ -2,7 +2,7 @@
 //  RegisterView.swift
 //  WalkMyDogApp
 //
-//  Created by Artur on 1/9/2024.
+//  Created by Artur and Jonathan on 1/9/2024.
 //
 
 import SwiftUI
@@ -27,20 +27,20 @@ struct RegisterView: View {
             // Logo at the top
             Image("logo")
                 .resizable()
-                .frame(width: 100, height: 100)
-                .padding(.vertical, 70.0)
+                .frame(width: 130, height: 130)
+                .padding(.vertical, 30.0)
                 .clipShape(Circle())   // Makes the logo round
                 .shadow(color: .gray, radius: 10, x: 10, y: 10) // Adds shadow
                 
             
             // App Name
-            Text("WalkMyDog")
+            Text("Create a new Account")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
                 .padding(.top, 20)
             
-            Spacer().frame(height: 50)
+            Spacer().frame(height: 40)
             
             // Username field
             TextField("Username", text: $username)
@@ -70,7 +70,7 @@ struct RegisterView: View {
                 .padding(.horizontal, 40.0)
                 .padding(.top, 10)
             
-            Spacer().frame(height: 40)
+            Spacer().frame(height: 90)
             
             // Register button with validation logic
             Button(action: {

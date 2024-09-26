@@ -3,7 +3,7 @@
 //  MainMenuView.swift
 //  WalkMyDogApp
 //
-//  Created by Artur on 1/9/2024.
+//  Created by Artur and Jonathan on 1/9/2024.
 //
 import MapKit
 import SwiftUI

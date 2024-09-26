@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  WalkMyDogApp
 //
-//  Created by Artur on 1/9/2024.
+//  Created by Artur and Jonathan on 1/9/2024.
 //
 
 import SwiftUI
@@ -25,7 +25,7 @@ struct LoginView: View {
                 // Logo at the top
                 Image("logo")
                     .resizable()
-                    .frame(width: 150, height: 150)
+                    .frame(width: 130, height: 130)
                     .padding(.vertical, 30.0)
                     .clipShape(Circle())   // Makes the logo round
                     .shadow(color: .gray, radius: 10, x: 10, y: 10) // Adds shadow

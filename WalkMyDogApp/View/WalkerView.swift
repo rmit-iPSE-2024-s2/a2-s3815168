@@ -2,7 +2,7 @@
 //  WalkerView.swift
 //  WalkMyDogApp
 //
-//  Created by Artur on 1/9/2024.
+//  Created by Artur and Jonathan on 1/9/2024.
 //
 
 import SwiftUI
@@ -47,7 +47,7 @@ struct WalkerView: View {
                     Image(systemName: "person.circle.fill")
                         .resizable()
                         .frame(width: 45, height: 45)
-                        .foregroundColor(.black)
+                        .foregroundColor(.mint)
                     
                     Text(walker.name)
                         .font(.title2)

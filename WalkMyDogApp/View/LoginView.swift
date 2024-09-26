@@ -25,8 +25,8 @@ struct LoginView: View {
                 // Logo at the top
                 Image("logo")
                     .resizable()
-                    .frame(width: 100, height: 100)
-                    .padding(.vertical, 70.0)
+                    .frame(width: 150, height: 150)
+                    .padding(.vertical, 30.0)
                     .clipShape(Circle())   // Makes the logo round
                     .shadow(color: .gray, radius: 10, x: 10, y: 10) // Adds shadow
                 
@@ -38,7 +38,7 @@ struct LoginView: View {
                     .foregroundColor(.white)
                     .padding(.top, 20)
                 
-                Spacer().frame(height: 50)
+                Spacer().frame(height: 30)
                 
                 // Username field
                 TextField("Username", text: $username)
@@ -57,7 +57,7 @@ struct LoginView: View {
                     .padding(.horizontal, 40.0)
                     .padding(.top , 10)
                 
-                Spacer().frame(height: 80)
+                Spacer().frame(height: 90)
                 
                 // Login button with error handling
                 Button(action: {

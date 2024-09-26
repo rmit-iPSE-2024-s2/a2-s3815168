@@ -57,7 +57,7 @@ struct LoginView: View {
                     .padding(.horizontal, 40.0)
                     .padding(.top , 10)
                 
-                Spacer().frame(height: 40)
+                Spacer().frame(height: 80)
                 
                 // Login button with error handling
                 Button(action: {
@@ -80,9 +80,26 @@ struct LoginView: View {
                 .alert(isPresented: $showAlert) {
                     Alert(title: Text("Login Failed"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                 }
+                
                 .navigationDestination(isPresented: $isLoggedIn) {
                     MainMenuView(username: username) // Navigate to MainMenuView when login is successful
                 }
+                
+                Button(action: {
+                
+                }) {
+                    Text("Login with Auth0")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .cornerRadius(90)
+                        .padding(.horizontal, 40)
+                }
+        
+                
+                
                 
                 // Register button
                 Button(action: {
@@ -96,8 +113,8 @@ struct LoginView: View {
                         .background(Color.blue)
                         .cornerRadius(90)
                         .padding(.horizontal, 40)
-                        .padding(.top, 10)
                 }
+                
                 
                 .navigationDestination(isPresented: $showRegister) {
                     RegisterView(userDataModel: userDataModel) // Pass the same UserDataModel instance

@@ -5,7 +5,7 @@
 //
 //  Created by Artur on 1/9/2024.
 //
-import GoogleMaps
+import MapKit
 import SwiftUI
 
 struct JobView: View {
@@ -13,7 +13,7 @@ struct JobView: View {
     var body: some View {
         VStack {
             
-            Spacer().frame(height: 40)
+            Spacer().frame(height: 100)
             
             // Text box at the top
             Text("Look for Jobs Available")
@@ -29,16 +29,16 @@ struct JobView: View {
                 .cornerRadius(10)
                 .padding(.horizontal, 20)
                 
-            Spacer().frame(height: 45)
+            Spacer().frame(height: 35)
             
             // Apple Map view
             AppleMapView()
-                .frame(height: 300)
+                .frame(height: 450)
                 .cornerRadius(10)
                 .padding(.horizontal, 20)
             
             
-            Spacer().frame(height: 90)
+            Spacer().frame(height: 10)
             
    
             // Back button

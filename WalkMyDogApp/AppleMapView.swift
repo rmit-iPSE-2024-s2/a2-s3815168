@@ -3,7 +3,7 @@ import MapKit
 
 struct AppleMapView: UIViewRepresentable {
     @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: -37.7136, longitude: 144.8631), // Default location
+        center: CLLocationCoordinate2D(latitude: -37.8136, longitude: 144.9631), // Default location
         span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
     )
 

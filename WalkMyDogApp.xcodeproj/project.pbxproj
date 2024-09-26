@@ -17,6 +17,8 @@
 		75CE26AA2C8465B70040492F /* WalkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE26A92C8465B70040492F /* WalkerView.swift */; };
 		75CE26B32C849ABC0040492F /* JobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE26B22C849ABC0040492F /* JobView.swift */; };
 		75CE26B52C849E520040492F /* AppleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE26B42C849E520040492F /* AppleMapView.swift */; };
+		8C9AA33B2CA527E000DBBDE9 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 8C9AA33A2CA527E000DBBDE9 /* Auth0 */; };
+		8C9AA33D2CA5299200DBBDE9 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9AA33C2CA5299200DBBDE9 /* Auth0.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,7 @@
 		75CE26A92C8465B70040492F /* WalkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkerView.swift; sourceTree = "<group>"; };
 		75CE26B22C849ABC0040492F /* JobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobView.swift; sourceTree = "<group>"; };
 		75CE26B42C849E520040492F /* AppleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMapView.swift; sourceTree = "<group>"; };
+		8C9AA33C2CA5299200DBBDE9 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9AA33B2CA527E000DBBDE9 /* Auth0 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +93,7 @@
 				75CE26B42C849E520040492F /* AppleMapView.swift */,
 				75CE269B2C8365E40040492F /* Assets.xcassets */,
 				75CE269D2C8365E40040492F /* Preview Content */,
+				8C9AA33C2CA5299200DBBDE9 /* Auth0.plist */,
 			);
 			path = WalkMyDogApp;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			);
 			name = WalkMyDogApp;
 			packageProductDependencies = (
+				8C9AA33A2CA527E000DBBDE9 /* Auth0 */,
 			);
 			productName = WalkMyDogApp;
 			productReference = 75CE26942C8365E00040492F /* WalkMyDogApp.app */;
@@ -148,6 +154,7 @@
 			);
 			mainGroup = 75CE268B2C8365E00040492F;
 			packageReferences = (
+				8C9AA3392CA527E000DBBDE9 /* XCRemoteSwiftPackageReference "Auth0" */,
 			);
 			productRefGroup = 75CE26952C8365E00040492F /* Products */;
 			projectDirPath = "";
@@ -164,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75CE269F2C8365E40040492F /* Preview Assets.xcassets in Resources */,
+				8C9AA33D2CA5299200DBBDE9 /* Auth0.plist in Resources */,
 				75CE269C2C8365E40040492F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +394,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C9AA3392CA527E000DBBDE9 /* XCRemoteSwiftPackageReference "Auth0" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/Auth0.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C9AA33A2CA527E000DBBDE9 /* Auth0 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C9AA3392CA527E000DBBDE9 /* XCRemoteSwiftPackageReference "Auth0" */;
+			productName = Auth0;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75CE268C2C8365E00040492F /* Project object */;
 }

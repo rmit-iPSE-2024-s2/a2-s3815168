@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Auth0
 
 struct LoginView: View {
     // Variables for username and password
@@ -13,6 +14,7 @@ struct LoginView: View {
     @State private var password: String = ""
     @State private var isLoggedIn: Bool = false
     @State private var showRegister: Bool = false
+    @State private var isAuthenticated: Bool = false // Track Auth0 authentication state
     
     @ObservedObject var userDataModel: UserDataModel
     
@@ -29,7 +31,6 @@ struct LoginView: View {
                     .padding(.vertical, 30.0)
                     .clipShape(Circle())   // Makes the logo round
                     .shadow(color: .gray, radius: 10, x: 10, y: 10) // Adds shadow
-                
                 
                 // App Name
                 Text("WalkMyDog")
@@ -80,13 +81,13 @@ struct LoginView: View {
                 .alert(isPresented: $showAlert) {
                     Alert(title: Text("Login Failed"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                 }
-                
                 .navigationDestination(isPresented: $isLoggedIn) {
                     MainMenuView(username: username) // Navigate to MainMenuView when login is successful
                 }
                 
+                // New "Login with Auth0" button
                 Button(action: {
-                
+                    loginWithAuth0() // Call the Auth0 login function
                 }) {
                     Text("Login with Auth0")
                         .font(.headline)
@@ -97,9 +98,6 @@ struct LoginView: View {
                         .cornerRadius(90)
                         .padding(.horizontal, 40)
                 }
-        
-                
-                
                 
                 // Register button
                 Button(action: {
@@ -114,8 +112,6 @@ struct LoginView: View {
                         .cornerRadius(90)
                         .padding(.horizontal, 40)
                 }
-                
-                
                 .navigationDestination(isPresented: $showRegister) {
                     RegisterView(userDataModel: userDataModel) // Pass the same UserDataModel instance
                 }
@@ -129,9 +125,23 @@ struct LoginView: View {
         }
     }
     
+    // Add the Auth0 login function
+    func loginWithAuth0() {
+        Auth0
+          .webAuth()
+          .start { result in
+            switch result {
+              case .failure(let error):
+                print("Failed with: \(error)")
+              case .success(let credentials):
+                self.isAuthenticated = true
+                print("Credentials: \(credentials)")
+                print("ID token: \(credentials.idToken)")
+            }
+          }
+    }
 }
 
 #Preview {
     LoginView(userDataModel: UserDataModel())
 }
-

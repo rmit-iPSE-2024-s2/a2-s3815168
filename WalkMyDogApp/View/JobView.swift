@@ -31,8 +31,8 @@ struct JobView: View {
                 
             Spacer().frame(height: 45)
             
-            // Google Map view
-            GoogleMapView()
+            // Apple Map view
+            AppleMapView()
                 .frame(height: 300)
                 .cornerRadius(10)
                 .padding(.horizontal, 20)
@@ -53,7 +53,7 @@ struct JobView: View {
                     .background(Color.blue)
                     .cornerRadius(90)
                     .padding(.horizontal, 40)
-                    .padding(.top, 10)
+                    .padding(.top, 60)
             }
             
             Spacer(minLength: 90)

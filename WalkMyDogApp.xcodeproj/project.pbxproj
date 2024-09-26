@@ -15,10 +15,8 @@
 		75CE26A62C8458440040492F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE26A52C8458440040492F /* RegisterView.swift */; };
 		75CE26A82C845A8B0040492F /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE26A72C845A8B0040492F /* MainMenuView.swift */; };
 		75CE26AA2C8465B70040492F /* WalkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE26A92C8465B70040492F /* WalkerView.swift */; };
-		75CE26AD2C84947B0040492F /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 75CE26AC2C84947B0040492F /* GoogleMaps */; };
 		75CE26B32C849ABC0040492F /* JobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE26B22C849ABC0040492F /* JobView.swift */; };
-		75CE26B52C849E520040492F /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE26B42C849E520040492F /* GoogleMapView.swift */; };
-		75CE26B72C849EE10040492F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE26B62C849EE00040492F /* AppDelegate.swift */; };
+		75CE26B52C849E520040492F /* AppleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE26B42C849E520040492F /* AppleMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +30,7 @@
 		75CE26A72C845A8B0040492F /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		75CE26A92C8465B70040492F /* WalkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkerView.swift; sourceTree = "<group>"; };
 		75CE26B22C849ABC0040492F /* JobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobView.swift; sourceTree = "<group>"; };
-		75CE26B42C849E520040492F /* GoogleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapView.swift; sourceTree = "<group>"; };
-		75CE26B62C849EE00040492F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		75CE26B42C849E520040492F /* AppleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75CE26AD2C84947B0040492F /* GoogleMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,8 +86,7 @@
 				7550A29A2C9BCD8600275CF7 /* Model */,
 				75CE26972C8365E00040492F /* WalkMyDogAppApp.swift */,
 				7550A29D2C9BCDE600275CF7 /* View */,
-				75CE26B42C849E520040492F /* GoogleMapView.swift */,
-				75CE26B62C849EE00040492F /* AppDelegate.swift */,
+				75CE26B42C849E520040492F /* AppleMapView.swift */,
 				75CE269B2C8365E40040492F /* Assets.xcassets */,
 				75CE269D2C8365E40040492F /* Preview Content */,
 			);
@@ -123,7 +118,6 @@
 			);
 			name = WalkMyDogApp;
 			packageProductDependencies = (
-				75CE26AC2C84947B0040492F /* GoogleMaps */,
 			);
 			productName = WalkMyDogApp;
 			productReference = 75CE26942C8365E00040492F /* WalkMyDogApp.app */;
@@ -154,7 +148,6 @@
 			);
 			mainGroup = 75CE268B2C8365E00040492F;
 			packageReferences = (
-				75CE26AB2C84947B0040492F /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
 			);
 			productRefGroup = 75CE26952C8365E00040492F /* Products */;
 			projectDirPath = "";
@@ -182,12 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75CE26B72C849EE10040492F /* AppDelegate.swift in Sources */,
 				75CE26B32C849ABC0040492F /* JobView.swift in Sources */,
 				75CE26A62C8458440040492F /* RegisterView.swift in Sources */,
 				75CE26AA2C8465B70040492F /* WalkerView.swift in Sources */,
 				75CE269A2C8365E00040492F /* LoginView.swift in Sources */,
-				75CE26B52C849E520040492F /* GoogleMapView.swift in Sources */,
+				75CE26B52C849E520040492F /* AppleMapView.swift in Sources */,
 				7550A29C2C9BCDB100275CF7 /* UserDataModel.swift in Sources */,
 				75CE26A82C845A8B0040492F /* MainMenuView.swift in Sources */,
 				75CE26982C8365E00040492F /* WalkMyDogAppApp.swift in Sources */,
@@ -394,25 +386,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		75CE26AB2C84947B0040492F /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.1.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		75CE26AC2C84947B0040492F /* GoogleMaps */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 75CE26AB2C84947B0040492F /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
-			productName = GoogleMaps;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75CE268C2C8365E00040492F /* Project object */;
 }
